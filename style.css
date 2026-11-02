@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2d2d44;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+}
+
+header select {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Зал */
+.hall {
+    text-align: center;
+}
+
+.screen {
+    background-color: #ccc;
+    color: black;
+    width: 80%;
+    margin: 0 auto 30px auto;
+    padding: 8px;
+    border-radius: 0 0 50% 50%;
+    font-weight: bold;
+}
+
+#seats {
+    display: grid;
+    grid-template-columns: repeat(15, 30px);
+    gap: 5px;
+    justify-content: center;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 11px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat.free {
+    background-color: #4a90e2;
+}
+
+.seat.free:hover {
+    background-color: #6aaaf5;
+}
+
+.seat.booked {
+    background-color: #2ecc71;
+}
+
+.seat.occupied {
+    background-color: #666;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Легенда */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.legend-box.free {
+    background-color: #4a90e2;
+}
+
+.legend-box.booked {
+    background-color: #2ecc71;
+}
+
+.legend-box.occupied {
+    background-color: #666;
+}
+
+/* Чек */
+.check {
+    background-color: #2d2d44;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.check h2 {
+    margin-top: 0;
+}
+
+#selectedList {
+    padding-left: 20px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.field input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #555;
+    border-radius: 5px;
+}
+
+.field input.valid {
+    border-color: #2ecc71;
+}
+
+.field input.invalid {
+    border-color: #e74c3c;
+}
+
+.error {
+    color: #ff6b6b;
+    font-size: 13px;
+}
+
+button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #777;
+    cursor: not-allowed;
+}

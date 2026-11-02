@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование мест в кинозале</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- шапка -->
+    <header>
+        <h1 id="movieName">Название фильма</h1>
+        <p id="movieTime">Время сеанса</p>
+
+        <label for="sessionSelect">Выберите сеанс:</label>
+        <select id="sessionSelect"></select>
+    </header>
+
+    <main>
+        <!-- зал -->
+        <section class="hall">
+            <div class="screen">ЭКРАН</div>
+            <div id="seats"></div>
+        </section>
+
+        <section class="legend">
+            <div class="legend-item">
+                <div class="legend-box free"></div>
+                <span>Свободно</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box booked"></div>
+                <span>Выбрано</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box occupied"></div>
+                <span>Занято</span>
+            </div>
+        </section>
+
+        <!-- Чек -->
+        <section class="check">
+            <h2>Ваш заказ</h2>
+
+            <ul id="selectedList"></ul>
+            <p id="emptyText">Места пока не выбраны</p>
+
+            <p class="total">Итого: <span id="totalSum">0</span> руб.</p>
+
+            <form id="bookForm" novalidate>
+                <div class="field">
+                    <label for="userName">Имя:</label>
+                    <input type="text" id="userName" placeholder="Например, Иван">
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="field">
+                    <label for="userPhone">Телефон:</label>
+                    <input type="text" id="userPhone" placeholder="+79991234567">
+                    <span class="error" id="phoneError"></span>
+                </div>
+
+                <button type="submit" id="bookBtn" disabled>Забронировать</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
